@@ -85,16 +85,25 @@ let students = [
 ];
 console.log(students);
 
-let listNameStudents = students.map((nameUppercase) => {
-    return nameUppercase.name.toUpperCase();
+let listNameStudents = students.map((el) => {
+    return el.name.toUpperCase();
 })
 console.log(listNameStudents);
 
 // 2.
-const gradesList = students.filter((gradesHight) => {
-    if (gradesHight.grades > 70) {
+const gradesList = students.filter((el) => {
+    if (el.grades >= 70) {
         return true;
     }
     return false;
-})
+});
 console.log(gradesList);
+
+// 3.
+const newList =  students.filter((el) => {
+    if (el.grades >= 70 && el.id >= 120){
+        return true;
+    }
+    return false;
+});
+console.log(newList);
