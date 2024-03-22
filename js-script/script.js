@@ -11,3 +11,16 @@ nome dell'ospite (guestName),
 posto occupato (place),
 Generiamo e stampiamo in console la lista per i segnaposto.
 */
+
+let guests = [ 'Brad Pitt', 'Johnny Depp', 'Lady Gaga', 'Cristiano Ronaldo', 'Georgina Rodriguez', 'Chiara Ferragni',  'George Clooney', 'Amal Clooney', 'Fedez', 'Amadeus', 'Fiorello'];
+let tableName = 'Tavolo Vip';
+
+const guestList = guests.map((guestName, index) => {
+    return {
+        tableName: tableName,
+        guestName: guestName,
+        place: index + 1
+    }
+    
+})
+console.log(guestList);
