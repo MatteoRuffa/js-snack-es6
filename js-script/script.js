@@ -46,18 +46,55 @@ Id  Name                Grades
 */
 
 // 1.
-let nameStudents = [
-    'Marco della Rovere',
-    'Paola Cortellessa' ,
-    'Andrea Mantegna',
-    'Gaia Borromini',
-    'Luigi Grimaldello',
-    'Piero della Francesca',
-    'Francesca da Polenta'
+let students = [
+    {
+        id: 213,
+        name: 'Marco della Rovere',
+        grades: 78
+    },
+    {
+        id: 110,
+        name: 'Paola Cortellessa',
+        grades: 96
+    },
+    {
+        id: 250,
+        name: 'Andrea Mantegna',
+        grades: 78
+    },
+    {
+        id: 145,
+        name: 'Gaia Borromini',
+        grades: 74
+    },
+    {
+        id: 196,
+        name: 'Luigi Grimaldello',
+        grades: 68
+    },
+    {
+        id: 102,
+        name: 'Piero della Francesca',
+        grades: 50
+    },
+    {
+        id: 120,
+        name: 'Francesca da Polenta',
+        grades: 84
+    }
 ];
-console.log(nameStudents);
+console.log(students);
 
-let listNameStudents = nameStudents.map((el) => {
-    return el.toUpperCase();
+let listNameStudents = students.map((nameUppercase) => {
+    return nameUppercase.name.toUpperCase();
 })
 console.log(listNameStudents);
+
+// 2.
+const gradesList = students.filter((gradesHight) => {
+    if (gradesHight.grades > 70) {
+        return true;
+    }
+    return false;
+})
+console.log(gradesList);
