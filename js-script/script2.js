@@ -59,7 +59,7 @@ let biciLeggera = biciClone.reduce(function(accumulatore, corrente) {
 console.log(`La bici più leggera è ${biciLeggera.nome} con un peso di ${biciLeggera.peso}`);
 
 let elBoxResult = document.createElement('div');
-elBoxResult.classList.add('text-center', 'fw-2', 'fs-2', 'p-2');
+elBoxResult.classList.add('text-center', 'fw-bold', 'fs-2', 'p-2');
 document.querySelector('.container').appendChild(elBoxResult);
 
 elBoxResult.innerHTML = `La bici più leggera è ${biciLeggera.nome} con un peso di ${biciLeggera.peso}`;
@@ -84,5 +84,11 @@ let newSquadreClone = [];
 
 squadreClone.forEach(({ nome, falliSubiti }) => {
     newSquadreClone.push(`Nome: ${nome}, Falli Subiti: ${falliSubiti}`);
+    let elBoxSquadre = document.createElement('div');
+    elBoxSquadre.classList.add('text-center', 'fw-3', 'fs-3', 'p-1');
+    document.querySelector('.container').appendChild(elBoxSquadre);
+    elBoxSquadre.innerHTML = `Nome: ${nome}, Falli Subiti: ${falliSubiti}`
 });
 console.log(newSquadreClone);
+
+
