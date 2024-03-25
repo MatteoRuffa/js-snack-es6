@@ -21,7 +21,7 @@ let bici = [];
 for(let i = 0; i < 10; i++) {
     let biciOgg = {
         nome: 'Bici' +' '+ (i + 1),
-        peso: Math.floor(Math.random() * (30 - 20)) + 10  // Peso casuale tra 10 e 30
+        peso: Math.floor(Math.random() * (30 - 10)) + 10  // Peso casuale tra 10 e 30
     };
     bici.push(biciOgg);
 };
