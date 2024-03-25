@@ -73,13 +73,15 @@ console.log(squadre);
 
 import { getRndInteger } from '../js-utility/utility.js';
 
-squadre.forEach((squadre) => {
-    squadre.puntiFatti = getRndInteger(1, 6);
-    squadre.falliSubiti = getRndInteger(1, 10);
-});
-console.log(squadre);
+let squadreClone = [...squadre]; //CHEDERE AI PROF COME NON 'INTACCARE' L'ARRAY ORIGINALE!!!
 
-let squadreClone = [...squadre];
+squadreClone.forEach((squadreClone) => {
+    squadreClone.puntiFatti = getRndInteger(1, 6);
+    squadreClone.falliSubiti = getRndInteger(1, 10);
+});
+console.log(squadreClone);
+
+
 let newSquadreClone = [];
 
 squadreClone.forEach(({ nome, falliSubiti }) => {
