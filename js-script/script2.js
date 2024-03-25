@@ -27,11 +27,21 @@ for(let i = 0; i < 10; i++) {
 };
 console.log(bici);
 
+
+
 let biciClone = [...bici];
 
 biciClone.forEach(({nome, peso }) => {
-    console.log(`il peso della ${nome}, è: ${peso}`);
+    console.log(`il peso della ${nome} è: ${peso}`);
+    
+    let elBoxArray = document.createElement('div');
+    elBoxArray.classList.add('text-center', 'fw-3', 'fs-3', 'p-1');
+    document.querySelector('.container').appendChild(elBoxArray);
+    elBoxArray.innerHTML = `il peso della ${nome} è: ${peso}`;
 });
+
+
+
 
 let biciLeggera = biciClone.reduce(function(accumulatore, corrente) {
     if(corrente.peso < accumulatore.peso) {
@@ -47,3 +57,9 @@ let biciLeggera = biciClone.reduce(function(accumulatore, corrente) {
 });
 */
 console.log(`La bici più leggera è ${biciLeggera.nome} con un peso di ${biciLeggera.peso}`);
+
+let elBoxResult = document.createElement('div');
+elBoxResult.classList.add('text-center', 'fw-2', 'fs-2', 'p-2');
+document.querySelector('.container').appendChild(elBoxResult);
+
+elBoxResult.innerHTML = `La bici più leggera è ${biciLeggera.nome} con un peso di ${biciLeggera.peso}`
