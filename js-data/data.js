@@ -1,0 +1,1 @@
+export const mieiDati = [/* il mio array di dati qui */ 1, 2, ,3, 4];

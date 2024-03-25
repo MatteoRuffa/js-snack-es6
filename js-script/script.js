@@ -1,3 +1,5 @@
+import { getRndInteger } from '../js-utility/utility.js';
+import { mieiDati } from '../js-data/data.js';
 /*
 SNACK 1
 Dwayne Johnson ci ha chiesto di creare i segnaposto per il tavolo degli invitati alla sua mega festa vip.
